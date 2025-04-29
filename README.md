@@ -11,6 +11,8 @@ This is a voice-controlled cooking assistant built with Python. It guides users 
 - Predefined recipe steps with voice responses
 - Command-based flow control (e.g., "next step", "repeat")
 - Easy to customize and extend with more recipes
+- Voice command to play videos on YT
+- Set timmers
 
 ---
 
