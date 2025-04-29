@@ -1,6 +1,6 @@
 # 🔊 Voice-Controlled Cooking Assistant
 
-This is a voice-controlled cooking assistant built with Python. It guides users through step-by-step recipes using voice commands like "next step", "repeat", or "stop". It also includes the ability to recognize simple spoken inputs and manage recipe flow interactively.
+This is a voice-controlled cooking assistant built with Python. It guides users through step-by-step recipes using voice commands like "next step", "repeat", or "stop". It also includes the ability to recognize simple spoken inputs and manage recipe flow interactively. It aims to do all tasks of the user while he/she is busy in cooking.
 
 ---
 
