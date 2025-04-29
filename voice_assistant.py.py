@@ -6,9 +6,8 @@ import pyttsx3
 import re
 import json
 
-should_exit = False  # Flag to exit the assistant
+should_exit = False  
 
-# Initialize text-to-speech engine
 engine = pyttsx3.init()
 
 def speak(text):
@@ -16,7 +15,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-# Sample recipes with nutritional information
+
 recipes = {
     "maggi": {
         "steps": [
@@ -59,7 +58,7 @@ recipes = {
     }
 }
 
-# Globals to track recipe
+
 current_recipe = {}
 step_index = 0
 
@@ -69,12 +68,11 @@ user_profile = {
     "favorite_recipes": ["maggi", "pasta"],
     "allergies": ["peanut"],
     "preferences": {
-        "spiciness": "mild",  # Could be 'mild', 'medium', 'spicy'
+        "spiciness": "mild",  
         "cuisine": "Indian"
     }
 }
 
-# Save and load user profile
 def save_profile():
     with open('user_profile.json', 'w') as file:
         json.dump(user_profile, file)
@@ -99,7 +97,6 @@ def suggest_recipe():
     else:
         speak("How about trying a simple and mild Maggi or some Pasta?")
 
-# Recipe commands
 def listen_command():
     global should_exit
     global step_index
@@ -185,7 +182,6 @@ def listen_command():
             elif 'suggest a recipe' in command.lower():
                 suggest_recipe()
 
-            # Updated command for spice level change
             elif 'change spice level' in command.lower():
                 if 'spicy' in command.lower():
                     update_user_preference('spiciness', 'spicy')
@@ -199,7 +195,7 @@ def listen_command():
             elif 'exit' in command.lower() or 'stop' in command.lower():
                 print("👋 Exiting the assistant. Happy cooking!")
                 speak("Okay, exiting. Happy cooking!")
-                should_exit = True  # Set the flag to True to exit the loop
+                should_exit = True  
 
             else:
                 print("🤔 No valid command detected.")
@@ -213,4 +209,4 @@ def listen_command():
 if __name__ == "__main__":
     load_profile()
     while not should_exit:
-        listen_command()  # Keep listening until 'exit' or 'stop' is said
+        listen_command() 
